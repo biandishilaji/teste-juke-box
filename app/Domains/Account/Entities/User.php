@@ -6,8 +6,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Tymon\JWTAuth\Contracts\JWTSubject;
 
-class User extends Authenticatable
+
+class User extends Authenticatable implements JWTSubject
+
 {
     use Notifiable, SoftDeletes;
 
@@ -19,15 +22,14 @@ class User extends Authenticatable
 
     protected $fillable = [
         'id',
-        'document',
         'login',
+        'document',
         'password',
         'name',
         'email',
-        'accountant',
+        'logged_at',
         'created_at',
         'updated_at',
-        'deleted_at'
     ];
 
     public $hidden = [
@@ -38,15 +40,15 @@ class User extends Authenticatable
         'deleted_at'
     ];
 
-//    public function getJWTIdentifier()
-//    {
-//        return $this->getKey();
-//    }
+    public function getJWTIdentifier()
+    {
+        return $this->getKey();
+    }
 
-//    public function getJWTCustomClaims()
-//    {
-//        return [];
-//    }
+    public function getJWTCustomClaims()
+    {
+        return [];
+    }
 
 
 }

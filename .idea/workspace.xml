@@ -2,95 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fb0aef8-a393-4f2c-acae-b5c030434e21" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.styleci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.styleci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Core/Http/Controllers/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Core/Http/Controllers/ApiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Core/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Core/Http/Controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/api_m.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/api_m.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Core/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Core/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Core/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Core/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Core/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Core/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Core/Providers/BroadcastServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Core/Providers/BroadcastServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Core/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Core/Providers/EventServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Core/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Core/Providers/RouteServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Domains/Account/Entities/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domains/Account/Entities/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Domains/Management/Entities/ModelBase.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domains/Management/Entities/ModelBase.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Modules/Account/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Modules/Account/Controllers/AuthController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Modules/Account/Routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Modules/Account/Routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/ModulesServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Modules/ModulesServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/artisan" beforeDir="false" afterPath="$PROJECT_DIR$/artisan" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/cache/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/cache/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/broadcasting.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/broadcasting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cache.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/cors.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/hashing.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/hashing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/logging.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/logging.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/module.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/module.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/queue.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/queue.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/database/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/web.config" beforeDir="false" afterPath="$PROJECT_DIR$/public/web.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/pagination.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/pagination.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/passwords.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/passwords.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/channels.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/console.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/console.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/server.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/public/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/public/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/data/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/sessions/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/testing/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/testing/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/CreatesApplication.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/CreatesApplication.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -211,6 +141,9 @@
       <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
       <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
       <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/vendor/tymon/jwt-auth" />
+      <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/vendor/namshi/jose" />
     </include_path>
   </component>
   <component name="ProjectId" id="1nPDAjWLCcTfo5ny4V4RVuSq0oQ" />
@@ -221,7 +154,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Core/Http/Controllers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -248,6 +181,8 @@
       <option name="presentableId" value="Default" />
       <updated>1611282712982</updated>
       <workItem from="1611282714154" duration="2107000" />
+      <workItem from="1611286685482" duration="351000" />
+      <workItem from="1611287039873" duration="1566000" />
     </task>
     <servers />
   </component>
@@ -255,54 +190,58 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1320" height="279" key="GridCell.Tab.0.bottom" timestamp="1611284603655">
+    <state x="467" y="161" key="FileChooserDialogImpl" timestamp="1611287035573">
       <screen x="0" y="36" width="1366" height="732" />
     </state>
-    <state width="1320" height="279" key="GridCell.Tab.0.bottom/0.36.1366.732@0.36.1366.732" timestamp="1611284603655" />
-    <state width="1320" height="279" key="GridCell.Tab.0.center" timestamp="1611284603655">
+    <state x="467" y="161" key="FileChooserDialogImpl/0.36.1366.732@0.36.1366.732" timestamp="1611287035573" />
+    <state width="1320" height="204" key="GridCell.Tab.0.bottom" timestamp="1611288626500">
       <screen x="0" y="36" width="1366" height="732" />
     </state>
-    <state width="1320" height="279" key="GridCell.Tab.0.center/0.36.1366.732@0.36.1366.732" timestamp="1611284603655" />
-    <state width="1320" height="279" key="GridCell.Tab.0.left" timestamp="1611284603654">
+    <state width="1320" height="204" key="GridCell.Tab.0.bottom/0.36.1366.732@0.36.1366.732" timestamp="1611288626500" />
+    <state width="1320" height="204" key="GridCell.Tab.0.center" timestamp="1611288626499">
       <screen x="0" y="36" width="1366" height="732" />
     </state>
-    <state width="1320" height="279" key="GridCell.Tab.0.left/0.36.1366.732@0.36.1366.732" timestamp="1611284603654" />
-    <state width="1320" height="279" key="GridCell.Tab.0.right" timestamp="1611284603655">
+    <state width="1320" height="204" key="GridCell.Tab.0.center/0.36.1366.732@0.36.1366.732" timestamp="1611288626499" />
+    <state width="1320" height="204" key="GridCell.Tab.0.left" timestamp="1611288626499">
       <screen x="0" y="36" width="1366" height="732" />
     </state>
-    <state width="1320" height="279" key="GridCell.Tab.0.right/0.36.1366.732@0.36.1366.732" timestamp="1611284603655" />
-    <state width="1320" height="279" key="GridCell.Tab.1.bottom" timestamp="1611284603656">
+    <state width="1320" height="204" key="GridCell.Tab.0.left/0.36.1366.732@0.36.1366.732" timestamp="1611288626499" />
+    <state width="1320" height="204" key="GridCell.Tab.0.right" timestamp="1611288626500">
       <screen x="0" y="36" width="1366" height="732" />
     </state>
-    <state width="1320" height="279" key="GridCell.Tab.1.bottom/0.36.1366.732@0.36.1366.732" timestamp="1611284603656" />
-    <state width="1320" height="279" key="GridCell.Tab.1.center" timestamp="1611284603656">
+    <state width="1320" height="204" key="GridCell.Tab.0.right/0.36.1366.732@0.36.1366.732" timestamp="1611288626500" />
+    <state width="1320" height="204" key="GridCell.Tab.1.bottom" timestamp="1611288626501">
       <screen x="0" y="36" width="1366" height="732" />
     </state>
-    <state width="1320" height="279" key="GridCell.Tab.1.center/0.36.1366.732@0.36.1366.732" timestamp="1611284603656" />
-    <state width="1320" height="279" key="GridCell.Tab.1.left" timestamp="1611284603655">
+    <state width="1320" height="204" key="GridCell.Tab.1.bottom/0.36.1366.732@0.36.1366.732" timestamp="1611288626501" />
+    <state width="1320" height="204" key="GridCell.Tab.1.center" timestamp="1611288626500">
       <screen x="0" y="36" width="1366" height="732" />
     </state>
-    <state width="1320" height="279" key="GridCell.Tab.1.left/0.36.1366.732@0.36.1366.732" timestamp="1611284603655" />
-    <state width="1320" height="279" key="GridCell.Tab.1.right" timestamp="1611284603656">
+    <state width="1320" height="204" key="GridCell.Tab.1.center/0.36.1366.732@0.36.1366.732" timestamp="1611288626500" />
+    <state width="1320" height="204" key="GridCell.Tab.1.left" timestamp="1611288626500">
       <screen x="0" y="36" width="1366" height="732" />
     </state>
-    <state width="1320" height="279" key="GridCell.Tab.1.right/0.36.1366.732@0.36.1366.732" timestamp="1611284603656" />
-    <state width="1320" height="279" key="GridCell.Tab.2.bottom" timestamp="1611284603660">
+    <state width="1320" height="204" key="GridCell.Tab.1.left/0.36.1366.732@0.36.1366.732" timestamp="1611288626500" />
+    <state width="1320" height="204" key="GridCell.Tab.1.right" timestamp="1611288626500">
       <screen x="0" y="36" width="1366" height="732" />
     </state>
-    <state width="1320" height="279" key="GridCell.Tab.2.bottom/0.36.1366.732@0.36.1366.732" timestamp="1611284603660" />
-    <state width="1320" height="279" key="GridCell.Tab.2.center" timestamp="1611284603656">
+    <state width="1320" height="204" key="GridCell.Tab.1.right/0.36.1366.732@0.36.1366.732" timestamp="1611288626500" />
+    <state width="1320" height="204" key="GridCell.Tab.2.bottom" timestamp="1611288626502">
       <screen x="0" y="36" width="1366" height="732" />
     </state>
-    <state width="1320" height="279" key="GridCell.Tab.2.center/0.36.1366.732@0.36.1366.732" timestamp="1611284603656" />
-    <state width="1320" height="279" key="GridCell.Tab.2.left" timestamp="1611284603656">
+    <state width="1320" height="204" key="GridCell.Tab.2.bottom/0.36.1366.732@0.36.1366.732" timestamp="1611288626502" />
+    <state width="1320" height="204" key="GridCell.Tab.2.center" timestamp="1611288626501">
       <screen x="0" y="36" width="1366" height="732" />
     </state>
-    <state width="1320" height="279" key="GridCell.Tab.2.left/0.36.1366.732@0.36.1366.732" timestamp="1611284603656" />
-    <state width="1320" height="279" key="GridCell.Tab.2.right" timestamp="1611284603657">
+    <state width="1320" height="204" key="GridCell.Tab.2.center/0.36.1366.732@0.36.1366.732" timestamp="1611288626501" />
+    <state width="1320" height="204" key="GridCell.Tab.2.left" timestamp="1611288626501">
       <screen x="0" y="36" width="1366" height="732" />
     </state>
-    <state width="1320" height="279" key="GridCell.Tab.2.right/0.36.1366.732@0.36.1366.732" timestamp="1611284603657" />
+    <state width="1320" height="204" key="GridCell.Tab.2.left/0.36.1366.732@0.36.1366.732" timestamp="1611288626501" />
+    <state width="1320" height="204" key="GridCell.Tab.2.right" timestamp="1611288626501">
+      <screen x="0" y="36" width="1366" height="732" />
+    </state>
+    <state width="1320" height="204" key="GridCell.Tab.2.right/0.36.1366.732@0.36.1366.732" timestamp="1611288626501" />
     <state x="502" y="124" key="NewPhpClassDialog" timestamp="1611284545837">
       <screen x="0" y="36" width="1366" height="732" />
     </state>
@@ -311,6 +250,14 @@
       <screen x="0" y="36" width="1366" height="732" />
     </state>
     <state x="501" y="328" key="NewPhpFileDialog/0.36.1366.732@0.36.1366.732" timestamp="1611283463739" />
+    <state x="96" y="136" width="1174" height="538" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1611287757055">
+      <screen x="0" y="36" width="1366" height="732" />
+    </state>
+    <state x="96" y="136" width="1174" height="538" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.36.1366.732@0.36.1366.732" timestamp="1611287757055" />
+    <state x="387" y="144" width="592" height="522" key="find.popup" timestamp="1611287444977">
+      <screen x="0" y="36" width="1366" height="732" />
+    </state>
+    <state x="387" y="144" width="592" height="522" key="find.popup/0.36.1366.732@0.36.1366.732" timestamp="1611287444977" />
     <state x="444" y="97" key="git4idea.branch.GitSmartOperationDialog" timestamp="1611284827524">
       <screen x="0" y="36" width="1366" height="732" />
     </state>
@@ -325,8 +272,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Modules/Account/Controllers/AuthController.php</url>
-          <line>15</line>
+          <line>57</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Modules/Account/Controllers/AuthController.php</url>
+          <line>38</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
