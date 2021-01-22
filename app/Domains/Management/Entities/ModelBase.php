@@ -1,10 +1,12 @@
 <?php
 
-
 namespace App\Domains\Management\Entities;
 
+use Illuminate\Database\Eloquent\Model;
 
-class ModelBase
+abstract class ModelBase extends Model
 {
+
+    public $module = 'account';
 
 }
