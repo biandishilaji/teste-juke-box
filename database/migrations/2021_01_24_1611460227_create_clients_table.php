@@ -14,8 +14,8 @@ class CreateClientsTable extends Migration
 		$table->string('name',50);
         $table->string('document',15);
         $table->timestamps();
-        $table->string('client_type',30)->nullable()->default('NULL');
-        $table->string('details',100)->nullable()->default('NULL');
+        $table->string('client_type',30)->nullable();
+        $table->string('details',100)->nullable();
         $table->timestamp('deleted_at')->nullable();
         });
     }

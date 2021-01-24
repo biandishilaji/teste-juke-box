@@ -10,8 +10,8 @@ class CreateClientTasksTable extends Migration
     {
         Schema::create('client_tasks', function (Blueprint $table) {
 		$table->id('id')->length(20);
-		$table->integer('task_id');
-		$table->integer('client_id');
+		$table->bigInteger('task_id',false,true);
+		$table->bigInteger('client_id',false,true);
         $table->foreign('client_id')->references('id')->on('clients');		$table->foreign('task_id')->references('id')->on('tasks');
         $table->timestamp('deleted_at')->nullable();
         });
