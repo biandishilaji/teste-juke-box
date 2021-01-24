@@ -3,5 +3,6 @@
 return  [
     'modules' => [
         'Account',
+        'Management'
     ]
 ];
