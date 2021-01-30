@@ -6,9 +6,12 @@ namespace App\Modules\Account\Controllers;
 
 use App\Core\Http\Controllers\ApiController;
 
+use App\Domains\Account\Traits\sendMustVerifyEmail;
 use Carbon\Carbon;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Validator;
 use App\Domains\Account\Entities\User;
 
@@ -16,15 +19,12 @@ use App\Domains\Account\Entities\User;
 class AuthController extends ApiController
 {
 
+    use sendMustVerifyEmail;
+
     public function __construct()
     {
     }
 
-    /**
-     * Get a JWT via given credentials.
-     *
-     * @return \Illuminate\Http\JsonResponse
-     */
     public function login(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -41,82 +41,65 @@ class AuthController extends ApiController
         }
 
         $User = User::where('id', auth()->user()->id)->first();
+
+        if (!$User->hasVerifiedEmail()) {
+            return $this->responseError('E-mail não verificado. Favor verificar seu e-mail.');
+        }
+
+        return $this->sendVerificationMail($request);
+
         $User->logged_at = Carbon::now()->toDateTimeString();
         $User->save();
 
         return $this->createNewToken($token);
     }
 
-    /**
-     * Register a User.
-     *
-     * @return \Illuminate\Http\JsonResponse
-     */
     public function register(Request $request)
     {
 
-        $validator = Validator::make($request->all(), [
-            'name' => 'required|string|between:2,100',
-            'email' => 'required|string|email|max:100|unique:users',
-            'password' => 'required|string|confirmed|min:6',
-            'document' => 'required|string'
-        ]);
+//        $validator = Validator::make($request->all(), [
+//            'name' => 'required|string|between:2,100',
+//            'email' => 'required|string|email|max:100|unique:users',
+//            'password' => 'required|string|confirmed|min:6',
+//            'document' => 'required|string'
+//        ]);
+//
+//        if ($validator->fails()) {
+//            return response()->json($validator->errors()->toJson(), 400);
+//        }
+//
+//        $user = User::create(array_merge(
+//            $validator->validated(),
+//            ['password' => bcrypt($request->password)]
+//        ));
 
-        if ($validator->fails()) {
-            return response()->json($validator->errors()->toJson(), 400);
-        }
+        $user = User::where('id', 1)->first();
 
-        $user = User::create(array_merge(
-            $validator->validated(),
-            ['password' => bcrypt($request->password)]
-        ));
+        $this->sendVerificationMail($user);
 
-        return response()->json([
-            'message' => 'Usuário cadastrado com sucesso!',
-            'user' => $user
-        ], 201);
+//        return response()->json([
+//            'message' => 'Usuário cadastrado com sucesso!',
+//            'user' => $user
+//        ], 201);
     }
 
-
-    /**
-     * Log the user out (Invalidate the token).
-     *
-     * @return \Illuminate\Http\JsonResponse
-     */
     public function logout()
     {
         auth()->logout();
 
-        return response()->json(['message' => 'User successfully signed out']);
+        return response()->json(['message' => 'Usuário deslogado com sucesso!']);
     }
 
-    /**
-     * Refresh a token.
-     *
-     * @return \Illuminate\Http\JsonResponse
-     */
     public function refresh()
     {
         return $this->createNewToken(auth()->refresh());
     }
 
-    /**
-     * Get the authenticated User.
-     *
-     * @return \Illuminate\Http\JsonResponse
-     */
     public function userProfile()
     {
         return response()->json(auth()->user());
     }
 
-    /**
-     * Get the token array structure.
-     *
-     * @param string $token
-     *
-     * @return \Illuminate\Http\JsonResponse
-     */
     protected function createNewToken($token)
     {
         return response()->json([
