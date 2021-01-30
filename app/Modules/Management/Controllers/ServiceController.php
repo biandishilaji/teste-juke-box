@@ -2,24 +2,24 @@
 namespace App\Modules\Management\Controllers;
 
 use App\Core\Http\Controllers\ApiController;
+use App\Infrastructure\Repositories\Modules\Management\ServiceRepository;
 use Illuminate\Http\Request;
 use Validator;
-use App\Infrastructure\Repositories\Modules\Management\ServiceRepository;
 
 class ServiceController extends ApiController
 {
 
-    private $_nameRepository;
+    private $_serviceRepository;
 
-    public function __construct(ServiceRepository $nameRepository)
+    public function __construct(ServiceRepository $serviceRepository)
     {
-        $this->_nameRepository = $nameRepository;
+        $this->_serviceRepository = $serviceRepository;
     }
 
     public function postCreateService(Request $request)
     {
         try {
-            $data = $request->only(['name', 'price','description']);
+            $data = $request->only(['name', 'price', 'description']);
 
             $validator = Validator::make($data, [
                 'name' => 'required',
@@ -29,13 +29,82 @@ class ServiceController extends ApiController
             if ($validator->fails()) {
                 return $this->responseError('Favor preencher todos os campos obrigatórios!', $validator->errors());
             }
+            $service = $this->_serviceRepository->create($data);
+            return $this->responseSuccess("Serviço cadastrado com sucesso!", []);
 
-           $service = $this->_nameRepository->create($data);
-
-        } catch (\Exception $e) {
-            return $this->responseSuccess($e->getMessage(), []);
+        } catch (\Exception$e) {
+            return $this->responseError($e->getMessage(), []);
         }
+    }
+    public function getServiceById($id)
+    {
+        try {
+            $data = ['id' => $id];
+            $validator = Validator::make($data, [
+                'id' => 'required|integer',
+            ]);
+            if ($validator->fails()) {
+                return $this->responseError('Informar um id válido!', $validator->errors());
+            }
+            $service = $this->_serviceRepository->find((int) $id);
+            if (isset($service->id)) {
+                return $this->responseSuccess('Pesquisado com sucesso', $service);
+            } else {
+                return $this->responseError('Serviço não encontrado.', []);
+            }
+        } catch (\Exception$e) {
+            return $this->responseError($e->getMessage(), []);
+        }
+    }
 
-        return $this->responseSuccess("Serviço cadastrado com sucesso!", []);
+    public function getServices()
+    {
+        try {
+            return $this->responseSuccess('', $this->_serviceRepository->all());
+        } catch (\Exception$e) {
+            return $this->responseError($e->getMessage(), []);
+        }
+    }
+    public function deleteService($id)
+    {
+        try {
+            $data = ['id' => $id];
+            $validator = Validator::make($data, [
+                'id' => 'required|integer',
+            ]);
+            if ($validator->fails()) {
+                return $this->responseError('Informar um id válido!', $validator->errors());
+            }
+            $rows = $this->_serviceRepository->delete((int) $id);
+            if ($rows == 0) {
+                return $this->responseError('Serviço não encontrado!', []);
+            } else {
+                return $this->responseSuccess('Deletado com sucesso!', []);
+            }
+        } catch (\Exception$e) {
+            return $this->responseError($e->getMessage(), []);
+        }
+    }
+    public function updateService(Request $request)
+    {
+        try {
+            $data = $request->only(['id','name', 'price', 'description']);
+            $validator = Validator::make($data, [
+                'id' => 'required',
+                'name' => 'required',
+                'price' => 'required',
+            ]);
+            if ($validator->fails()) {
+                return $this->responseError('Favor preencher todos os campos obrigatórios!', $validator->errors());
+            }
+            $rows = $this->_serviceRepository->update($data, (int)$data['id']);
+            if ($rows == 0) {
+                return $this->responseError('Serviço não encontrado!', []);
+            } else {
+                return $this->responseSuccess('Editado com sucesso!', []);
+            }
+        } catch (\Exception$e) {
+            return $this->responseError($e->getMessage(), []);
+        }
     }
 }
