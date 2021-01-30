@@ -2,6 +2,9 @@
 
 namespace App\Domains\Account\Entities;
 
+use App\Modules\Account\Mails\MailResetPasswordNotification;
+use Illuminate\Auth\MustVerifyEmail;
+use Illuminate\Auth\Notifications\VerifyEmail;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 use Illuminate\Notifications\Notifiable;
@@ -12,7 +15,7 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
 class User extends Authenticatable implements JWTSubject
 
 {
-    use Notifiable, SoftDeletes;
+    use Notifiable, SoftDeletes, MustVerifyEmail;
 
     public $module = 'account';
 
@@ -25,6 +28,7 @@ class User extends Authenticatable implements JWTSubject
         'login',
         'document',
         'password',
+        'email_verified_at',
         'name',
         'email',
         'logged_at',
@@ -50,5 +54,9 @@ class User extends Authenticatable implements JWTSubject
         return [];
     }
 
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new MailResetPasswordNotification($token));
+    }
 
 }
