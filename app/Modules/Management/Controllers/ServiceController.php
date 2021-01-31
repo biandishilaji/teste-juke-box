@@ -32,7 +32,7 @@ class ServiceController extends ApiController
             $service = $this->_serviceRepository->create($data);
             return $this->responseSuccess("Serviço cadastrado com sucesso!", []);
 
-        } catch (\Exception$e) {
+        } catch (\Exception $e) {
             return $this->responseError($e->getMessage(), []);
         }
     }
@@ -52,7 +52,7 @@ class ServiceController extends ApiController
     {
         try {
             return $this->responseSuccess('', $this->_serviceRepository->paginate(8));
-        } catch (\Exception$e) {
+        } catch (\Exception $e) {
             return $this->responseError($e->getMessage(), []);
         }
     }
@@ -73,7 +73,7 @@ class ServiceController extends ApiController
             } else {
                 return $this->responseSuccess('Deletado com sucesso!', []);
             }
-        } catch (\Exception$e) {
+        } catch (\Exception $e) {
             return $this->responseError($e->getMessage(), []);
         }
     }
