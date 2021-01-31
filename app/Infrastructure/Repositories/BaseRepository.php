@@ -7,7 +7,6 @@ use Illuminate\Container\Container as App;
 use Illuminate\Database\Eloquent\Model;
 
 use App\Infrastructure\Repositories\Interfaces\IBaseRepository;
-use App\Infrastructure\Repositories\Exceptions\RepositoryException;
 
 abstract class BaseRepository implements IBaseRepository
 {
@@ -69,7 +68,7 @@ abstract class BaseRepository implements IBaseRepository
         $model = $this->app->make($this->model());
 
         if (!$model instanceof Model) {
-            throw new RepositoryException("Class {$this->model()} must be an instance of Illuminate\\Database\\Eloquent\\Model");
+            throw new \Exception("Class {$this->model()} must be an instance of Illuminate\\Database\\Eloquent\\Model");
         }
 
         return $this->model = $model;

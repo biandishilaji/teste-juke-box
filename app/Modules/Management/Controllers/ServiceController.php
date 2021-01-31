@@ -39,32 +39,24 @@ class ServiceController extends ApiController
     public function getServiceById($id)
     {
         try {
-            $data = ['id' => $id];
-            $validator = Validator::make($data, [
-                'id' => 'required|integer',
-            ]);
-            if ($validator->fails()) {
-                return $this->responseError('Informar um id válido!', $validator->errors());
+            if(!$service = $this->_serviceRepository->find(($id))){
+                throw new \Exception('Serviço não encontrado!');
             }
-            $service = $this->_serviceRepository->find((int) $id);
-            if (isset($service->id)) {
-                return $this->responseSuccess('Pesquisado com sucesso', $service);
-            } else {
-                return $this->responseError('Serviço não encontrado.', []);
-            }
-        } catch (\Exception$e) {
+        } catch (\Exception $e) {
             return $this->responseError($e->getMessage(), []);
         }
-    }
+        return $this->responseSuccess('', $service);
+    } 
 
     public function getServices()
     {
         try {
-            return $this->responseSuccess('', $this->_serviceRepository->all());
+            return $this->responseSuccess('', $this->_serviceRepository->paginate(8));
         } catch (\Exception$e) {
             return $this->responseError($e->getMessage(), []);
         }
     }
+ 
     public function deleteService($id)
     {
         try {
@@ -103,7 +95,7 @@ class ServiceController extends ApiController
             } else {
                 return $this->responseSuccess('Editado com sucesso!', []);
             }
-        } catch (\Exception$e) {
+        } catch (\Exception $e) {
             return $this->responseError($e->getMessage(), []);
         }
     }
