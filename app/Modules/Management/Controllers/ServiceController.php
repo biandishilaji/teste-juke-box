@@ -3,6 +3,7 @@ namespace App\Modules\Management\Controllers;
 
 use App\Core\Http\Controllers\ApiController;
 use App\Infrastructure\Repositories\Modules\Management\ServiceRepository;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 class ServiceController extends ApiController
@@ -20,18 +21,15 @@ class ServiceController extends ApiController
         try {
             //comment
             $data = $request->only(['name', 'price', 'description']);
-
             $validator = Validator::make($data, [
                 'name' => 'required',
                 'price' => 'required',
             ]);
-
             if ($validator->fails()) {
-                return $this->responseError('Favor preencher todos os campos obrigatórios!', $validator->errors());
+                throw new \Exception('Favor preencher todos os campos obrigatórios!');
             }
             $service = $this->_serviceRepository->create($data);
             return $this->responseSuccess("Serviço cadastrado com sucesso!", []);
-
         } catch (\Exception $e) {
             return $this->responseError($e->getMessage(), []);
         }
@@ -65,14 +63,13 @@ class ServiceController extends ApiController
                 'id' => 'required|integer',
             ]);
             if ($validator->fails()) {
-                return $this->responseError('Informar um id válido!', $validator->errors());
+                throw new \Exception('Favor informar um id válido!');
             }
             $rows = $this->_serviceRepository->delete((int) $id);
             if ($rows == 0) {
-                return $this->responseError('Serviço não encontrado!', []);
-            } else {
-                return $this->responseSuccess('Deletado com sucesso!', []);
-            }
+                throw new \Exception('Serviço não encontrado!');
+            } 
+            return $this->responseSuccess('Deletado com sucesso!', []);
         } catch (\Exception $e) {
             return $this->responseError($e->getMessage(), []);
         }
@@ -87,14 +84,13 @@ class ServiceController extends ApiController
                 'price' => 'required',
             ]);
             if ($validator->fails()) {
-                return $this->responseError('Favor preencher todos os campos obrigatórios!', $validator->errors());
+                throw new \Exception('Favor preencher todos os campos obrigatórios!');
             }
             $rows = $this->_serviceRepository->update($data, (int)$data['id']);
             if ($rows == 0) {
-                return $this->responseError('Serviço não encontrado!', []);
-            } else {
+                throw new \Exception('Serviço não encontrado!');
+            } 
                 return $this->responseSuccess('Editado com sucesso!', []);
-            }
         } catch (\Exception $e) {
             return $this->responseError($e->getMessage(), []);
         }
