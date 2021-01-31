@@ -4,8 +4,7 @@ namespace App\Modules\Management\Controllers;
 use App\Core\Http\Controllers\ApiController;
 use App\Infrastructure\Repositories\Modules\Management\ServiceRepository;
 use Illuminate\Http\Request;
-use Validator;
-
+use Illuminate\Support\Facades\Validator;
 class ServiceController extends ApiController
 {
 
@@ -19,6 +18,7 @@ class ServiceController extends ApiController
     public function postCreateService(Request $request)
     {
         try {
+            //comment
             $data = $request->only(['name', 'price', 'description']);
 
             $validator = Validator::make($data, [
