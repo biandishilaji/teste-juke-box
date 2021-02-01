@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 abstract class ModelBase extends Model
 {
 
-    public $module = 'account';
+    public $module = 'Management';
 
 }
