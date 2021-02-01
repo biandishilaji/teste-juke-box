@@ -24,12 +24,7 @@ class ClientController extends ApiController
              $validator = Validator::make($data, [
                 'name' => 'required',
                 'document' => 'required',
-            ], [
-                'required' => 'O campo :attribute é obrigatório',
-            ], [
-                'document' => 'Documento',
-                'name' => 'Nome / Nome Fantasia',
-            ]);
+            ],
             
             // caso haja algum dado informado de forma indevida retornamos a seguinte resposta.
             if ($validator->fails()) {
