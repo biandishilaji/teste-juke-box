@@ -20,10 +20,17 @@ class ClientController extends ApiController
             //filtramos os dados que chegam da request
             $data = $request->only(['name', 'document', 'client_type', 'details']);
             //vamos verificar se os dados necessários estão sendo informados.
-            $validator = Validator::make($data, [
-                'name' => 'required|max:50|',
-                'document' => 'required|max:15',
+            
+             $validator = Validator::make($data, [
+                'name' => 'required',
+                'document' => 'required',
+            ], [
+                'required' => 'O campo :attribute é obrigatório',
+            ], [
+                'document' => 'Documento',
+                'name' => 'Nome / Nome Fantasia',
             ]);
+            
             // caso haja algum dado informado de forma indevida retornamos a seguinte resposta.
             if ($validator->fails()) {
                 throw new \Exception('Favor preencher todos os campos obrigatórios corretamente!');
@@ -31,10 +38,11 @@ class ClientController extends ApiController
             // portanto, passando pela nossa validação mandamos o array com os dados recebidos para o repositório.
             $client = $this->_clientRepository->create($data);
             // sendo assim, informamos o usuário que a operação foi um sucesso.
-            return $this->responseSuccess('Cliente cadastrado com sucesso!', []);
+          
         } catch (\Exception$e) {
             return $this->responseError($e->getMessage(), []);
         }
+          return $this->responseSuccess('Cliente cadastrado com sucesso!', []);
     }
 
     public function getClientById($id)
@@ -61,21 +69,14 @@ class ClientController extends ApiController
     public function deleteClient($id)
     {
         try {
-            $data = ['id' => $id];
-            $validator = Validator::make($data, [
-                'id' => 'required|integer',
-            ]);
-            if ($validator->fails()) {
-                throw new \Exception('Favor informar um id correto!');
-            }
-            $rows = $this->_clientRepository->delete((int) $id);
-            if ($rows == 0) {
-                throw new \Exception('Cliente não encontrado!');
-            }
-            return $this->responseSuccess('Deletado com sucesso!', []);
+            !isset($id) throw new \Exception('Favor informar um id correto');
+          
+            if(!$this->$this->_clientRepository->delete((int)$id) throw new \Exception('Cliente não encontrado!');
+         
         } catch (\Exception$e) {
             return $this->responseError($e->getMessage(), []);
         }
+         return $this->responseSuccess('Cliente removido com sucesso!', []);
     }
     public function updateClient(Request $request)
     {
