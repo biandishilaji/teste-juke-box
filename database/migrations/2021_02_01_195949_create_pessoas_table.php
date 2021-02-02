@@ -9,7 +9,6 @@ class CreatePessoasTable extends Migration
     public function up()
     {
         Schema::create('pessoas', function (Blueprint $table) {
-
             $table->id('id');
             $table->string('name',50);
             $table->string('category',50);
@@ -17,7 +16,7 @@ class CreatePessoasTable extends Migration
             $table->string('author',50);
             $table->boolean('ebook');
             $table->bigInteger('file_size',false,true)->nullable();
-            $table->decimal('weight',8,2,true)->nullable();
+            $table->bigInteger('weight',false,true)->nullable();
             });
     }
     public function down()
